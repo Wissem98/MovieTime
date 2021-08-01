@@ -147,7 +147,7 @@ import useAutoComplete from "../useAutoComplete";
  
   //import Search from './Search.vue';
 
-import movies from '../movies.json'
+import movies from '../assets/movies.json'
   import { useMovieApi } from '../hooks/movie-api';
 import AutoComplete from './AutoComplete.vue';
 
