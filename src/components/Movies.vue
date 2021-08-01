@@ -5,10 +5,11 @@
     
 <div class="movies">
     
-    <Search :search="state.search" @search="handleSearch" />
-   
-  
-<page class="ion-page">
+<h2 class="font-weight-medium mb-3 mt-4 pa-5" >   <v-icon large color="white" class="icc"  >mdi-movie</v-icon>
+ Trending Movies</h2>
+
+    <li style="display:flex; justify-content:space-around;  " class="holder">
+      <page class="ion-page">
       <content>
         <div v-if="options.length">
           <item class="result-section">
@@ -18,9 +19,17 @@
         </div>
       </content>
     </page>
+    <Search :search="state.search" @search="handleSearch" class="ser" />
+   
+  
 
- <h2 class="font-weight-medium mb-3 mt-4 pa-5" >   <v-icon large color="white"  >mdi-movie</v-icon>
- Trending Movies</h2>
+
+ 
+
+    </li>
+
+
+
      <v-sheet
       class="mx-auto"
       elevation="8"
@@ -216,8 +225,14 @@ console.log("dedede",state.search)
 
 
 <style scoped>
+.ser{margin-right: -10px;
+;}
+.ion-page{
+width: 450px;
+margin-left: 700px;
+margin-top:-72px;
 
-
+}
 .result-section {
   position: absolute;
   top: 110px;
@@ -421,10 +436,11 @@ margin-top: 10px;}
 
 
 
+.icc{margin-top: 1px;}
 
-
-.font-weight-medium{color: ivory;
-
+.font-weight-medium{
+  margin-left: -812px;
+  color: rgb(255, 247, 240);
  -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;

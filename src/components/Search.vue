@@ -8,7 +8,7 @@
 
  <v-text-field  v-model="last"
             class="input"
-      
+      v-if="seen"
               solo-inverted
                :value="movieTitle"
        @keyup="handleChange">
@@ -42,6 +42,11 @@
   export default {
     name: 'Search',
     props: ['search'],
+   data() {
+    return {
+     seen:false
+    };
+  },
     setup({ search }, { emit }) {
       const movieTitle = ref(search);
 
@@ -59,5 +64,6 @@
   };
 </script>
 <style scoped>
-
+.mx-2{margin-top: -85px;
+}
 </style>
