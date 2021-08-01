@@ -4,29 +4,28 @@ const API_KEY = 'fa248759';
 
 export const useMovieApi = () => {
     const state = reactive({
-        search: ['avengers', 'joker'],
+        search: 'avengers',
         loading: true,
         movies: []
     });
 
-    for (const element of state.search) {
-        console.log("sd", element);
-        watch(() => {
+
+    watch(() => {
 
 
-            console.log("sd", element);
-            const MOVIE_API_URL = `https://www.omdbapi.com/?s=${element}&apikey=${API_KEY}`;
-            console.log("URLLL", MOVIE_API_URL);
-            fetch(MOVIE_API_URL)
-                .then(response => response.json())
-                .then(jsonResponse => {
-                    state.movies = jsonResponse.Search;
-                    state.loading = true;
-                });
 
-        });
+        const MOVIE_API_URL = `https://www.omdbapi.com/?s=${state.search}&apikey=${API_KEY}`;
+        console.log("URLLL", MOVIE_API_URL);
+        fetch(MOVIE_API_URL)
+            .then(response => response.json())
+            .then(jsonResponse => {
+                state.movies = jsonResponse.Search;
+                state.loading = true;
+            });
+
+    });
 
 
-    }
+
     return state;
 };
