@@ -103,7 +103,7 @@
   
        <v-card-text class="text--primary">
          <h1 class="banner__title">{{titlee}}</h1>
-        <div class="titlee"><b>Genre : </b> {{titlee}} ,   <b>Year:</b> {{year}}</div><br>
+        <div class="titlee"><b>imdbID : </b> {{id}} ,   <b>Year:</b> {{year}}</div><br>
         <div class="plot">{{plot}}</div><br>
         
         
@@ -151,6 +151,7 @@ import movies from '../assets/movies.json'
   import { useMovieApi } from '../hooks/movie-api';
 import AutoComplete from './AutoComplete.vue';
 
+
   export default {
     name: 'app',
     components: {  AutoComplete},
@@ -169,10 +170,14 @@ import AutoComplete from './AutoComplete.vue';
     };
   },
     setup({ options, optionsKey }) {
+      
       const state = useMovieApi();
-console.log("dedede",state.search)
+      
+
+
       return {
         state,
+     
         handleSearch(searchTerm) {
           state.loading = true;
           state.search = searchTerm;
@@ -193,7 +198,7 @@ console.log("dedede",state.search)
    
      this.year=movie?.Year;
       this.titlee=movie?.Title;
-      this.id=movie?.Title;
+      this.id=movie?.imdbID;
        console.log("movie title", this.year);
       console.log("movie idd", this.id);
 

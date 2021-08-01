@@ -47,7 +47,7 @@
           <v-icon>mdi-heart</v-icon>
         </v-btn>
   
-        <v-btn icon >
+        <v-btn icon  @click="Abt()">
           <v-icon>mdi-information-outline</v-icon>
         </v-btn>
      
@@ -66,6 +66,8 @@ export default {
       this.$router.push('/Favorite/')
     },toggleTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },Abt () {
+      this.$router.push('/About/')
     }
    
 

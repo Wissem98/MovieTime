@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
 import colors from 'vuetify/lib/util/colors';
-
+import store from "./store";
 import App from './App.vue'
 import router from "./router";
 import vuetify from './plugins/vuetify'
@@ -35,6 +35,7 @@ export default new Vuetify({
 
 new Vue({
     router,
+    store,
     vuetify,
 
     render: h => h(App)
