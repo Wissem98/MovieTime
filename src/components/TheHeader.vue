@@ -1,7 +1,7 @@
 <template>
 <div>
-    <v-app-bar color="#111" dark elevate-on-scroll fixed absolute 
-    src="https://picsum.photos/1920/1080?random"
+    <v-app-bar class="bar"  dark elevate-on-scroll fixed 
+   
         fade-img-on-scroll
         scroll-target="#scrolling-techniques-3">
        <v-btn
@@ -32,6 +32,13 @@
     
   <v-spacer></v-spacer>
   
+  
+      <v-btn icon v-if="!$vuetify.theme.dark" @click="toggleTheme()">
+        <v-icon color="red">mdi-lightbulb-outline</v-icon>
+      </v-btn> 
+      <v-btn icon v-if="$vuetify.theme.dark" @click="toggleTheme()">
+        <v-icon class="mr-1" color="grey">mdi-lightbulb</v-icon>
+      </v-btn>
         <v-btn icon>
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
@@ -57,6 +64,8 @@ export default {
    methods: {
     Fav () {
       this.$router.push('/Favorite/')
+    },toggleTheme() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     }
    
 
@@ -73,4 +82,5 @@ export default {
 a:-webkit-any-link {
   text-decoration: none;
 }
+.bar{background-color: black;}
 </style>

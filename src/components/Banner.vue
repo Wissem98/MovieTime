@@ -20,8 +20,24 @@
     
         <div class="banner__buttons">
          
-          <button class="banner__button rounded-0">Play</button>
-          <button class="banner__button rounded-0">Favorite</button>
+          <button class="banner__button rounded-0" >Play <v-icon
+         right
+          dark
+          class="az"
+              size="17"
+          
+        >
+          mdi-play
+        </v-icon></button>
+          <button class="banner__button rounded-0" @click="Fav()">Favorite <v-icon
+         right
+          dark
+          class="fav"
+          size="15"
+          
+        >
+          mdi-heart
+        </v-icon></button>
         </div>
         <p class="banner__description">dzdbshfbdshfbshdbfhsdfsdhfbsbfdbfbdsfbsdfsdfbsdbfdshfbdsfbhsdbfbsdfbsdhfbshbdfbshdbfsdhfbsdhf</p>
       </div>
@@ -55,6 +71,13 @@ export default {
       };
     },
   },
+  methods: {
+    Fav () {
+      this.$router.push('/Favorite/')
+    }
+   
+
+   }
 };
 </script>
 
@@ -64,6 +87,14 @@ export default {
   object-fit: contain;
   height: 448px;
   width: 100%;
+}
+.az{margin-top: -3px;
+margin-left: 2px;}
+
+
+.fav{margin-top: -3px;
+margin-left: 2px;
+
 }
 
 .banner__contents {

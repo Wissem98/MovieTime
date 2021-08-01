@@ -1,14 +1,17 @@
 <template>
-  <div class="home">
-   
+ 
+   <v-container   fluid class="home__container">
  <Banner /> 
-  </div>
+ <Movies/>
+   </v-container>
+ 
 </template>
 
 <script>
 // @ is an alias to /src
 
 import Banner from "@/components/Banner.vue";
+import Movies from '../components/Movies.vue';
 
 
 export default {
@@ -17,12 +20,14 @@ export default {
   components: {
     
     Banner,
+    Movies,
   },
 };
 </script>
 
 <style scoped>
 .home__container {
-  background-color: #111;
+
+  scroll-behavior: inherit;
 }
 </style>
