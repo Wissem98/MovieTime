@@ -34,6 +34,7 @@
  <v-card
       class="mx-auto"
       max-width="400"
+      
     >
       <v-list>
         <v-list-item-group
@@ -43,13 +44,11 @@
         >
           <v-list-item
          
-           v-for="(s,i) in filteredSuggestions" :key="i" @click="selected(s)">{{s[optionsKey]}}
+           v-for="(s,i) in filteredSuggestions" :key="i" @click="selected(s)">
           
-            
+             <text-highlight :queries=userInput>{{s[optionsKey]}}</text-highlight>  
   
-            <v-list-item-content>
-              <v-list-item-title  ></v-list-item-title>
-            </v-list-item-content>
+           
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -63,8 +62,10 @@
 
 <script>
 import useAutoComplete from "../useAutoComplete";
+import TextHighlight from 'vue-text-highlight';
 export default {
   name: "AutoComplete",
+   components: {TextHighlight },
   props: {
     msg: String,
     options: Array,
@@ -128,4 +129,11 @@ margin-left: 399px;}
 
 .mx-2{margin-top: -130px;
 margin-left: 123px;}
+.v-list{
+  height:200px;/* or any height you want */
+  overflow-y:auto;
+  margin-top: -52px;
+ 
+}
+
 </style>

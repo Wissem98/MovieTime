@@ -74,7 +74,7 @@
       <v-expand-transition >
         <v-sheet 
           v-if="model != null"
-          height="400"
+          height="420"
           tile
                     :movie="movie"
 
@@ -85,17 +85,18 @@
             align="left"
             justify="center"
           >
-            <v-card
-      class="mx-auto"
-      max-width="800"
+            <v-card 
+      class="mx-autoo"
+      
  
     >
       <v-img
         class="white--text align-end"
-        height="200px"
+        height="410px"
+        width="280px"
         :src=title
       >
-        <v-card-title>Avengers End Game</v-card-title>
+       
       </v-img>
   
       
@@ -248,9 +249,9 @@ color: wheat;
 
 .titlee{
 
-margin-top: 20px;
-margin-left: -384px;
-color: black;
+margin-top: 23px;
+margin-left: 144px;
+
 font-size: 1rem;
 
 }
@@ -264,7 +265,7 @@ margin-top: -13px;
   font-weight: 800;
   padding-bottom: 0.3rem;
   margin-top: -62px;
-  margin-left: -312px;
+  margin-left: 82px;
 color: rgb(75, 34, 34);
  -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -285,11 +286,14 @@ color: rgb(75, 34, 34);
 margin-top: -250px;
 
 }
-.mx-autoo{margin-left: 82px;
-margin-top: 10px;}
+.mx-autoo{margin-left: 12px;
+margin-top: 10px;
+width: 1000px;
 
-.white--text {margin-left: 825px;
-margin-top: 10px;}
+}
+
+.white--text {margin-left: 700px;
+margin-top: 0px;}
 
   .app {
     text-align: center;
@@ -437,7 +441,7 @@ margin-top: 10px;}
 .icc{margin-top: 1px;}
 
 .font-weight-medium{
-  margin-left: -812px;
+  margin-left: -712px;
   color: rgb(255, 247, 240);
  -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;

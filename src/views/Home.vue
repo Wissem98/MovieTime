@@ -28,6 +28,7 @@ export default {
 <style scoped>
 .home__container {
 
-  scroll-behavior: inherit;
+
+  overflow-y:auto;
 }
 </style>
