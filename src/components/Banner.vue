@@ -67,7 +67,7 @@ export default {
       return {
         backgroundSize: this.size,
         backgroundPosition: this.position,
-        backgroundImage: `url("https://www.joblo.com/assets/images/joblo/posters/2019/04/Avengers-Endgame-Odeon-poster-1-A.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/ta5oblpMlEcIPIS2YGcq9XEkWK2.jpg")`,
       };
     },
   },

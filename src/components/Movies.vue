@@ -15,13 +15,11 @@
           <item class="result-section">
             <pre style="font-size:xx-small">{{selected}}</pre>
           </item>
-          <AutoComplete :options="options" :optionsKey="optionsKey" @save-option="saveResult"/>
+          <AutoComplete :options="options" :optionsKey="optionsKey" @save-option="saveResult" :search="state.search" @search="handleSearch" class="auc"/>
         </div>
       </content>
     </page>
-    <Search :search="state.search" @search="handleSearch" class="ser" />
-   
-  
+    
 
 
  
@@ -145,7 +143,7 @@
 <script>
 import useAutoComplete from "../useAutoComplete";
  
-  import Search from './Search.vue';
+  //import Search from './Search.vue';
 
 import movies from '../movies.json'
   import { useMovieApi } from '../hooks/movie-api';
@@ -153,7 +151,7 @@ import AutoComplete from './AutoComplete.vue';
 
   export default {
     name: 'app',
-    components: {  Search ,AutoComplete},
+    components: {  AutoComplete},
    
     data() {
     return {
@@ -225,14 +223,14 @@ console.log("dedede",state.search)
 
 
 <style scoped>
-.ser{margin-right: -10px;
-;}
-.ion-page{
-width: 450px;
-margin-left: 700px;
-margin-top:-72px;
 
+.auc{
+  width:400px;
+  margin-top: -72px;
+  margin-left: 700px;
 }
+
+
 .result-section {
   position: absolute;
   top: 110px;

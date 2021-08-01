@@ -13,8 +13,19 @@
             </v-icon>
           </template>
         </v-text-field>
-
-
+<div class="pad">
+<v-btn
+        class="mx-2"
+        fab
+        dark
+        color="teal"
+        @click="handleSubmit" type="submit" value="SEARCH"
+      >
+        <v-icon dark>
+          mdi-magnify
+        </v-icon>
+      </v-btn>
+</div>
 
     <card class="suggestions-card" v-if="filteredSuggestions.length">
      
@@ -59,8 +70,12 @@ export default {
     options: Array,
     optionsKey: String,
   },
-  setup({ options, optionsKey }) {
+  setup({ options, optionsKey }, {emit}) {
     return {
+      handleSubmit(event) {
+          event.preventDefault();
+          emit('search', this.userInput);
+        },
       ...useAutoComplete(options, optionsKey)
     };
   },
@@ -94,7 +109,8 @@ tr {
 input {
   border: 1px solid #999;
   padding: 0.5rem;
-  width: 300px;
+  width: 400px;
+  margin-top: -40px;
  
 }
 .dd{background: black;}
@@ -107,4 +123,9 @@ input {
   min-height: 500px;
   
 }
+.pad{
+margin-left: 399px;}
+
+.mx-2{margin-top: -130px;
+margin-left: 123px;}
 </style>
