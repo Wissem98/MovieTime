@@ -2,16 +2,16 @@
   <div class="ma-0">
     <header class="banner" :style="headerStyle" width="200">
       <div class="banner__contents">
-        <h1 class="banner__title">Avengers EndGame </h1>
+        <h1 class="banner__title">Wrath of Man </h1>
 
 <li style="display:flex; justify-content:space-around;  " class="holder">
       <v-icon class="genres">mdi-movie</v-icon>
-     <span class="genre">Horror</span>
+     <span class="genre">Action</span>
   <v-icon class="years">mdi-calendar</v-icon>
-      <span class="year">2000</span>
+      <span class="year">2021</span>
         <v-icon class="runtimes">mdi-timer</v-icon>
-       <span class="runtime">30 min</span>
-         <v-icon class="ratingstars">mdi-star</v-icon>
+       <span class="runtime">2h10min</span>
+         <v-icon class="ratingstars" >mdi-star </v-icon>
        <span class="ratingstars">(6.9)</span>
      
 </li>
@@ -39,7 +39,10 @@
           mdi-heart
         </v-icon></button>
         </div>
-        <p class="banner__description">dzdbshfbdshfbshdbfhsdfsdhfbsbfdbfbdsfbsdfsdfbsdbfdshfbdsfbhsdbfbsdfbsdhfbshbdfbshdbfsdhfbsdhf</p>
+        <p class="banner__description">A cold and mysterious new security guard for a Los Angeles 
+          cash truck company surprises his co-workers when he u
+          nleashes precision skills during a heist. The crew is 
+          left wondering who he is and where he came from.</p>
       </div>
       <div class="banner__fadeBottom" />
     </header>
@@ -53,9 +56,9 @@ export default {
   data() {
     return {
       showLoading: true,
-     
+  seen:false,
       size: "cover",
-      position: "center center",
+      position: "center top",
       image: "",
     };
   },
@@ -67,7 +70,7 @@ export default {
       return {
         backgroundSize: this.size,
         backgroundPosition: this.position,
-        backgroundImage: `url("https://image.tmdb.org/t/p/original/ta5oblpMlEcIPIS2YGcq9XEkWK2.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/M7SUK85sKjaStg4TKhlAVyGlz3.jpg")`,
       };
     },
   },
@@ -87,6 +90,7 @@ export default {
   object-fit: contain;
   height: 448px;
   width: 100%;
+ 
 }
 .az{margin-top: -3px;
 margin-left: 2px;}
@@ -112,13 +116,15 @@ margin-left: 2px;
 }
 
 .banner__description {
-  width: 225rem;
+  width: 265rem;
   margin-top: 1rem;
   line-height: 1.5;
   padding-top: 1rem;
-  font-size: 0.9rem;
-  max-width: 360px;
-  height: 80px;
+  font-size: 1rem;
+  margin-left: -2px;
+  padding-left: 12px;
+  max-width: 380px;
+  height: 145px;
   color: #fff;
   
   background-color: rgba(83, 82, 82, 0.5);
@@ -170,7 +176,7 @@ margin-left: 2px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  margin-left: -275px;
+  margin-left: -265px;
 }
 .years{
   font-size: 22px;
@@ -179,7 +185,7 @@ margin-left: 2px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  margin-left: -255px;
+  margin-left: -250px;
 }
 
 .genre{
@@ -189,7 +195,7 @@ margin-left: 2px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  margin-left: -275px;
+  margin-left: -265px;
 }
 
 .genres{
@@ -211,7 +217,7 @@ margin-left: 2px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  margin-left: -275px;
+  margin-left: -265px;
 }
 .runtimes{
   font-size: 22px;
@@ -229,22 +235,18 @@ margin-left: 2px;
   font-size: 23px;
   color: white;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  
  
   margin-left: -122px;
  
 }
 .ratingstars{
-  font-size: 23px;
+  font-size: 2px;
   color: white;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  
   margin-right:85px;
-  visibility: true;
+ 
 
 }
 

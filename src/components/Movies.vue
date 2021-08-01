@@ -113,6 +113,7 @@
         <v-btn class="btnn"
          
           text
+          
       
         >
           <v-icon left>
@@ -123,7 +124,7 @@
   
   
         <v-btn class="btnnx"
-          color="orange"
+        
           text
         >
         <v-icon left>
@@ -240,11 +241,13 @@ console.log("dedede",state.search)
 .iit{background: #4da9ff;}
 .de{background: #4da9ff;}
 .btnn{margin-top: 120px;
-background: rgb(161, 15, 15);
-color: wheat;
+background: rgb(122, 11, 11);
+color: white;
 }
 
 .btnnx{margin-top: 120px;
+background: rgb(122, 11, 11);
+color: white;
 }
 
 .titlee{
