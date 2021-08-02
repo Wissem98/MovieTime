@@ -1,5 +1,9 @@
-# vue-moviestime
+# Deployed vue-moviestime
 
+
+```
+https://moviestimex.herokuapp.com
+```
 ## Project setup
 ```
 yarn install
