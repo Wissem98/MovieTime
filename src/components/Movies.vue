@@ -122,8 +122,19 @@
         Play
         </v-btn>
   
-  
+  <v-alert
+        v-model="alert"
+        dismissible
+        color="cyan"
+        border="left"
+        elevation="2"
+        colored-border
+        icon="mdi-heart"
+      >
+        You've got <strong>a</strong> movie added to your favorites!.(Check Fav page)
+      </v-alert>
         <v-btn class="btnnx"
+        v-if="!alert"
           @click="addFavorite"
           text
         >
@@ -139,6 +150,7 @@
       </v-expand-transition>
     </v-sheet>
      <h2 class="font-weight-medium mb-3 mt-4 pa-5"></h2>
+      <div v-if="state.movies.length=0">No movie with such name</div>
 </div>
 </template>
 
@@ -165,6 +177,7 @@ import AutoComplete from './AutoComplete.vue';
       model: null,
       selected: {},
       id:null,
+      alert:false,
       options: [  { title: 'Feeee'}],
       optionsKey: "title"
     };
@@ -190,7 +203,7 @@ import AutoComplete from './AutoComplete.vue';
     },
     methods:{handleClick(movie) {
    
-     
+     this.alert=false;
       this.title=movie;
        console.log("movie title", this.title);
       
@@ -206,6 +219,7 @@ import AutoComplete from './AutoComplete.vue';
       
     },addFavorite: function() {
 const i=window.localStorage.length; 
+this.alert=true;
 const mov  = {
     "title": this.titlee,
     "year": this.year,
@@ -263,6 +277,7 @@ color: white;
 }
 
 .btnnx{margin-top: 120px;
+margin-left: 7px;
 background: rgb(122, 11, 11);
 color: white;
 }

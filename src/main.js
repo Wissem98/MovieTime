@@ -6,7 +6,15 @@ import App from './App.vue'
 import router from "./router";
 import vuetify from './plugins/vuetify'
 import VueCompositionApi from '@vue/composition-api';
+import VueSweetalert2 from 'vue-sweetalert2';
 
+
+Vue.config.errorHandler = (msg, vm, info) => {
+    alert(info)
+
+}
+
+Vue.use(VueSweetalert2);
 Vue.config.productionTip = false
 Vue.use(VueCompositionApi);
 Vue.config.ignoredElements = [/^ion-/];

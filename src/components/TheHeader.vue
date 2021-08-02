@@ -7,6 +7,7 @@
        <v-btn
         target="_blank"
         text
+        @click="Home()"
       >
        
          <v-icon large   >mdi-movie</v-icon>
@@ -68,6 +69,8 @@ export default {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },Abt () {
       this.$router.push('/About/')
+    },Home () {
+      this.$router.push('/')
     }
    
 
