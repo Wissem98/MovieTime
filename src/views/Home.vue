@@ -1,6 +1,6 @@
 <template>
  
-   <v-container   fluid class="home__container">
+   <v-container   fluid class="home__container" color='primary'>
  <Banner /> 
  <Movies/>
    </v-container>

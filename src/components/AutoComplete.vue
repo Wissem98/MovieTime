@@ -12,6 +12,7 @@
               mdi-magnify
             </v-icon>
           </template>
+          
         </v-text-field>
 <div class="pad">
 <v-btn

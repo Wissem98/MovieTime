@@ -10,7 +10,8 @@ import VueSweetalert2 from 'vue-sweetalert2';
 
 
 Vue.config.errorHandler = (msg, vm, info) => {
-    alert(info)
+    //alert(info)
+    console.log(msg, info);
 
 }
 

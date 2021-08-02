@@ -150,7 +150,7 @@
       </v-expand-transition>
     </v-sheet>
      <h2 class="font-weight-medium mb-3 mt-4 pa-5"></h2>
-      <div v-if="state.movies.length=0">No movie with such name</div>
+     
 </div>
 </template>
 
@@ -178,9 +178,13 @@ import AutoComplete from './AutoComplete.vue';
       selected: {},
       id:null,
       alert:false,
+      alertt:false,
       options: [  { title: 'Feeee'}],
       optionsKey: "title"
     };
+  },mounted(){
+    
+   
   },
     setup({ options, optionsKey }) {
       
@@ -204,6 +208,8 @@ import AutoComplete from './AutoComplete.vue';
     methods:{handleClick(movie) {
    
      this.alert=false;
+      
+
       this.title=movie;
        console.log("movie title", this.title);
       

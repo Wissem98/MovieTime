@@ -28,7 +28,7 @@ export default {
   }),errorCaptured(){
 
 //this.$ref.err.innerHTML='We haveeee'
-///console.log(err,vm,info)
+//console.log(err,vm,info)
   }
 };
 </script>
