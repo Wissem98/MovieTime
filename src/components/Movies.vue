@@ -124,7 +124,7 @@
   
   
         <v-btn class="btnnx"
-        
+          @click="addFavorite"
           text
         >
         <v-icon left>
@@ -204,7 +204,19 @@ import AutoComplete from './AutoComplete.vue';
 
 
       
-    },doSave: function(_clear) {
+    },addFavorite: function() {
+const i=window.localStorage.length; 
+const mov  = {
+    "title": this.titlee,
+    "year": this.year,
+    "image": this.title,
+    "id":this.id
+};
+
+       const dataa = JSON.stringify(mov);
+       window.localStorage.setItem(i,dataa);
+        console.log(JSON.parse(window.localStorage.getItem(i))['image']);
+},doSave: function(_clear) {
       if (_clear) {
         this.$emit("save-option", {});
         this.userInput = "";
